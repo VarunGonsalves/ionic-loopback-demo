@@ -7,10 +7,10 @@
 </ion-header>
 
 <ion-content class="ion-padding" [fullscreen]="true">
-  <ion-item>
+  <ion-item *ngFor="let student of studentList">
     <ion-list>
-      <h2>220101</h2>
-      <h4><b>Aaron</b></h4>
+      <h2>{{student.USN}}</h2>
+      <h4><b>{{student.Name}}</b></h4>
       <p>BSc</p>
     </ion-list>
     <div style="position: absolute; right: 0px; bottom: 0px; ">
