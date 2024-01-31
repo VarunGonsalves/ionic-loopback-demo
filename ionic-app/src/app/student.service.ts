@@ -18,20 +18,16 @@ export class StudentService {
     return new Promise(resolve => {
       this.http.get(this.apiBaseUrl+'students/'+USN).subscribe(data => {
         resolve(data);
-      }, err => {
-        console.log(err);
       })
-    })
+    });
   }
 
   getStudents() {
     return new Promise(resolve => {
       this.http.get(this.apiBaseUrl+'students/').subscribe(data => {
         resolve(data);
-      }, err => {
-        console.log(err);
       })
-    })
+    });
   }
 
   addStudent(student: any) {

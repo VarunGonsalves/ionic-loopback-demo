@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { StudentService } from '../student.service';
 
 @Component({
   selector: 'app-view',
@@ -9,9 +9,25 @@ import { Router } from '@angular/router';
 })
 export class ViewPage implements OnInit {
 
-  constructor(private router: Router) { }
+  USN: any;
+  name: any='';
+  course: any;
+  student: any;
+
+  constructor(private router: Router, private route: ActivatedRoute, private studentService: StudentService) {
+    this.USN = this.route.snapshot.params['USN'];
+    this.getStudent(this.USN);
+  }
 
   ngOnInit() {
+  }
+
+  getStudent(USN: any) {
+    this.studentService.getStudent(USN).then(data => {
+      this.student=data;
+      this.name=this.student.Name;
+      this.course=this.student.Course;
+    });
   }
 
   update() {

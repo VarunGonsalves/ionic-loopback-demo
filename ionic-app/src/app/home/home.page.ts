@@ -21,8 +21,8 @@ export class HomePage {
     })
   }
 
-  view() {
-    this.router.navigate(['view']);
+  view(USN: any) {
+    this.router.navigate(['view', {USN: USN}]);
   }
 
   add() {
