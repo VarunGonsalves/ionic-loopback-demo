@@ -9,9 +9,9 @@ import { StudentService } from '../student.service';
 })
 export class ViewPage implements OnInit {
 
-  USN: any;
+  USN: any='';
   name: any='';
-  course: any;
+  course: any='';
   student: any;
 
   constructor(private router: Router, private route: ActivatedRoute, private studentService: StudentService) {
