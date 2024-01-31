@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StudentService } from '../student.service';
 
 @Component({
   selector: 'app-add',
@@ -7,9 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddPage implements OnInit {
 
-  constructor() { }
+  usn: any='';
+  name: any='';
+  course: any='';
+
+  constructor(private studentService: StudentService) { }
 
   ngOnInit() {
+  }
+
+  addStudent() {
+    let student = {
+      USN: this.usn,
+      Name: this.name,
+      Course: this.course
+    };
+    if(this.usn!='' && this.name!='') {
+      this.studentService.addStudent(student).then(data => {
+        console.log(data);
+      });
+    }
   }
 
 }

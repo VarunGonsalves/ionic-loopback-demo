@@ -16,15 +16,15 @@
     </ion-card-header>
   
     <ion-item>
-      <ion-input label="&nbsp;&nbsp;&nbsp;&nbsp;USN" placeholder="Enter USN"></ion-input>
+      <ion-input label="&nbsp;&nbsp;&nbsp;&nbsp;USN" placeholder="Enter USN" [(ngModel)]="usn"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input label="&nbsp;&nbsp;Name" placeholder="Enter student name"></ion-input>
+      <ion-input label="&nbsp;&nbsp;Name" placeholder="Enter student name" [(ngModel)]="name"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input label="Course" placeholder="Enter course details"></ion-input>
+      <ion-input label="Course" placeholder="Enter course details" [(ngModel)]="course"></ion-input>
     </ion-item>
 
-    <ion-button fill="clear">Add</ion-button>
+    <ion-button fill="clear" (click)="addStudent()">Add</ion-button>
   </ion-card>
 </ion-content>

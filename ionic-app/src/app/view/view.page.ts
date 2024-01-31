@@ -9,14 +9,14 @@ import { StudentService } from '../student.service';
 })
 export class ViewPage implements OnInit {
 
-  USN: any='';
+  usn: any='';
   name: any='';
   course: any='';
   student: any;
 
   constructor(private router: Router, private route: ActivatedRoute, private studentService: StudentService) {
-    this.USN = this.route.snapshot.params['USN'];
-    this.getStudent(this.USN);
+    this.usn = this.route.snapshot.params['USN'];
+    this.getStudent(this.usn);
   }
 
   ngOnInit() {
