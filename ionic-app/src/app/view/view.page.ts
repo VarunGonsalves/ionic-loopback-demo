@@ -35,7 +35,10 @@ export class ViewPage implements OnInit {
   }
 
   delete() {
-    
+    if(confirm("Are you sure you want to delete student from database?")) {
+      this.studentService.deleteStudent(this.usn);
+    }
+    this.router.navigate(['home']);
   }
 
 }

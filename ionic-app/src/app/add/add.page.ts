@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { StudentService } from '../student.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class AddPage implements OnInit {
   name: any='';
   course: any='';
 
-  constructor(private studentService: StudentService) { }
+  constructor(private router: Router, private studentService: StudentService) { }
 
   ngOnInit() {
   }
@@ -28,6 +29,7 @@ export class AddPage implements OnInit {
         console.log(data);
       });
     }
+    this.router.navigate(['home']);
   }
 
 }
