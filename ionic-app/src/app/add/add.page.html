@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Student/<b>Add</b>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" [fullscreen]="true">
+  <ion-card>
+    <img src="./assets/dummy-image.jpg" alt="Student Photograph"/>
+
+    <ion-card-header>
+      <ion-card-title>New Student</ion-card-title>
+      <ion-card-subtitle>Enter student details</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-item>
+      <ion-input label="&nbsp;&nbsp;&nbsp;&nbsp;USN" placeholder="Enter USN"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="&nbsp;&nbsp;Name" placeholder="Enter student name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Course" placeholder="Enter course details"></ion-input>
+    </ion-item>
+
+    <ion-button fill="clear">Add</ion-button>
+  </ion-card>
+</ion-content>
