@@ -37,12 +37,12 @@ export class StudentController {
         'application/json': {
           schema: getModelSchemaRef(Student, {
             title: 'NewStudent',
-            exclude: ['USN'],
+            
           }),
         },
       },
     })
-    student: Omit<Student, 'USN'>,
+    student: Student,
   ): Promise<Student> {
     return this.studentRepository.create(student);
   }
