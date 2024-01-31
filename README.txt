@@ -7,7 +7,8 @@ application can be used to view, add, update or delete student data.
 
 PROJECT TITLE: Ionic-Loopback-Demo
 PURPOSE OF PROJECT: To show a simple demonstration of connecting an 
-		    ionic application to mongoDB via loopback api
+		    ionic application to mongoDB via loopback api.
+		    A student database is used.
 VERSION or DATE: 1
 HOW TO START THIS PROJECT: Start ionic-app by running ionic serve
 			   Start loopback server by running npm start
