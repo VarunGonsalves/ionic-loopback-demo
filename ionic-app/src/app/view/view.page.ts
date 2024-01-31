@@ -31,7 +31,7 @@ export class ViewPage implements OnInit {
   }
 
   update() {
-    this.router.navigate(['update']);
+    this.router.navigate(['update', {USN: this.usn, Name: this.name, Course: this.course}]);
   }
 
   delete() {
