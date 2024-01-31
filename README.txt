@@ -1,6 +1,6 @@
 ------------------------------------------------------------------------
 This is a simple demo for connecting loopback server to an ionic 
-application. The loopback server that connects to a mongoDB 
+application. The loopback server that connects to a MongoDB 
 database. It communicates with the ionic app via REST API. The ionic 
 application can be used to view, add, update or delete student data.
 ------------------------------------------------------------------------
